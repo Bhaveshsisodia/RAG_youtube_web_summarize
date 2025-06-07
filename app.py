@@ -15,7 +15,7 @@ os.environ["LANGCHAIN_TRACING_V2"] = "true"
 os.environ["LANGCHAIN_PROJECT"] = "YT-Summarizer"
 os.environ["LANGCHAIN_API_KEY"] = st.secrets["LANGCHAIN_API_KEY"] 
 
-groq_api_key= st.secrets["GROQ_API_KEY"] 
+
 
 
 
@@ -34,7 +34,7 @@ def extract_video_id(url):
 
 ## Get the Groq API Key and url(YT or website)to be summarized
 with st.sidebar:
-    groq_api_key=st.text_input("Groq API Key",value=groq_api_key,type="password")
+    groq_api_key=st.text_input("Groq API Key",value="",type="password")
 
 generic_url=st.text_input("URL",label_visibility="collapsed")
 print(generic_url)
@@ -102,9 +102,9 @@ if st.button("Summarize the Content from YT or Website"):
 
 
 
-                            print(full_english_text)
+                            # print(full_english_text)
                             loader = [Document(page_content=full_english_text)]  # wrap in list directly
-                            print(loader)
+                            # print(loader)
 
                             break
 
