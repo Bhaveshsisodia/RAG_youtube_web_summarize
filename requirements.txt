@@ -48,3 +48,4 @@ unstructured
 pytube
 numexpr
 huggingface_hub
+deep-translator
