@@ -49,8 +49,8 @@ Content:{text}
 """
 
 
-max_retries = 10
-retry_delay = 1  # seconds
+max_retries = 5
+retry_delay = 3  # seconds
 chunk_size=2100
 full_english_text =""
 
