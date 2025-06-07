@@ -9,6 +9,13 @@ import re
 import time
 from deep_translator import GoogleTranslator
 import textwrap
+import os
+
+os.environ["LANGCHAIN_TRACING_V2"] = "true"
+os.environ["LANGCHAIN_PROJECT"] = "YT-Summarizer"
+os.environ["LANGCHAIN_API_KEY"] =st.secrets("LANGCHAIN_API_KEY")
+
+
 
 ## sstreamlit APP
 st.set_page_config(page_title="LangChain: Summarize Text From YT or Website", page_icon="🦜")
